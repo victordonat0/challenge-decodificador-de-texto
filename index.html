@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Challenge decodificador texto || Alura</title>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div class="container">
+      <h1>Criptografar e Descriptografar Textos</h1>
+      <div class="content">
+        <div class="section">
+          <h2>Entrada</h2>
+          <textarea id="input" placeholder="Digite um texto para ser criptografado ou descriptografado"></textarea>
+          <p class="input-instruction">Digite apenas letras minúsculas e sem acentos</p>
+          <div id="encrypt-decrypt-buttons">
+            <button onclick="processText('encrypt')">Criptografar</button>
+            <button onclick="processText('decrypt')">Descriptografar</button>
+          </div>
+          <div class="buttons">
+            <button onclick="clearInput()">Limpar Entrada</button>
+          </div>
+        </div>
+        <div class="section">
+          <h2>Saída</h2>
+          <textarea id="output" readonly></textarea>
+          <div class="buttons">
+            <button onclick="copyToClipboard()">Copiar</button>
+            <button onclick="clearOutput()">Limpar Saída</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    Desenvolvido por Victor donato
+  </footer>
+  <div id="toast"></div>
+  <!-- JS, Jquery other scripts here! -->
+   <script src="./assets/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</body>
+</html>
